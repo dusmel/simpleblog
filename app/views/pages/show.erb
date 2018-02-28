@@ -1,0 +1,11 @@
+  <h1>
+  <%= @onePost.title %>
+</h1>
+<p>
+  <%= @onePost.body %>
+</p>
+<%= link_to 'Edit', edit_page_path(@onePost), :class => "btn btn-success "%>
+<%= link_to 'Delete', page_path(),
+              method: :delete,
+              data: {confirm: 'Are you sure?'},
+              :class => "btn btn-danger" %>

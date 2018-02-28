@@ -1,0 +1,25 @@
+<h2>
+  Edit  Event <span class="text-success"><%= @onePost.title %></span>
+</h2>
+<div class="row">
+  <div class="col-3">
+    <% if @onePost.errors.any? %>
+        <% @onePost.errors.full_messages.each do |msg| %>
+            <div class="alert-danger px-3 py-2"><p><%= msg %></p></div>
+        <% end %>
+    <% end %>
+    <%= form_for :form_post, url: page_path(@onePost), method: :patch do |f| %>
+      <p>
+        <%= f.label :title %><br>
+        <%= f.text_field(:title, {:class => "form-control"}) %>
+      </p>
+      <p>
+        <%= f.label :body %>
+        <%= f.text_area :body, :class => "form-control" %>
+      </p>
+      <p>
+        <%= f.submit 'Update', :class => "btn btn-primary" %><br>
+      </p>
+    <% end %>
+  </div>
+</div>

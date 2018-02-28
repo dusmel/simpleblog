@@ -1,0 +1,19 @@
+<h1>
+  Welcome page
+</h1>
+<div class="row">
+  <div class="col-4">
+    <% @allPosts.each do   |singlePost|  %>
+      <div class="bg-light p-2 mb-2 borderer">
+        <h2>
+          <%= singlePost.title %>
+        </h2>
+        <p>
+          <%=  singlePost.body %>
+        </p>
+        <%= link_to 'Read more', page_path(singlePost), :class => 'btn btn-outline-success' %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
