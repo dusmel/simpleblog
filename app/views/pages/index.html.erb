@@ -1,3 +1,13 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <h1>
   Welcome page
 </h1>
@@ -17,3 +27,27 @@
 
   </div>
 </div>
+
+<div
+class="fb-like"
+data-href="https://web.facebook.com/Kwendoorwanda/"
+data-width="40"
+data-layout="standard"
+data-action="like"
+data-size="large"
+data-show-faces="true"
+data-share="true">
+
+</div>
+
+<ul class="list-inline">
+  <li class="list-inline-item">
+    <%= link_to 'Wedding', page_path(Page.find(1), idss: "wedding" ), :class => 'btn btn-outline-success' %>
+  </li>
+  <li class="list-inline-item">
+    <%= link_to 'Birthday', page_path(Page.find(1), idss: "birthday"), :class => 'btn btn-outline-success' %>
+  </li>
+  <li class="list-inline-item">
+    <%= link_to 'funeral', page_path(Page.find(1), idss: "funeral"), :class => 'btn btn-outline-success' %>
+  </li>
+</ul>

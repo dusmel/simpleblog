@@ -1,11 +1,25 @@
-  <h1>
-  <%= @onePost.title %>
+
+
+<h1>
+<%= @onePost.title %>
 </h1>
 <p>
-  <%= @onePost.body %>
+<%= @onePost.body %>
 </p>
 <%= link_to 'Edit', edit_page_path(@onePost), :class => "btn btn-success "%>
 <%= link_to 'Delete', page_path(),
-              method: :delete,
-              data: {confirm: 'Are you sure?'},
-              :class => "btn btn-danger" %>
+            method: :delete,
+            data: {confirm: 'Are you sure?'},
+            :class => "btn btn-danger" %>
+
+
+
+ <h1 class="mt-4">
+   <%= @cat.capitalize %>
+ </h1>
+
+ <select class="my-4">
+   <option value="wedding" <%= @wedding %> >wedding</option>
+   <option value="birthday" <%= @birthday %> >birthday</option>
+   <option value="funeral" <%= @funeral %>>funeral</option>
+ </select>
