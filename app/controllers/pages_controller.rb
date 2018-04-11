@@ -15,6 +15,18 @@ class PagesController < ApplicationController
   end
   def show
     @onePost = Page.find(params[:id])
+    @cat = params[:idss]
+    @wedding = nil
+    @birthday = nil
+    @funeral = nil
+
+    if @cat == "wedding"
+      @wedding = 'selected'
+    elsif @cat == "birthday"
+      @birthday = "selected"
+    elsif @cat = "funeral"
+      @funeral = "selected"
+    end
   end
   def edit
     @onePost = Page.find(params[:id])
